@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Exploring Flask - Reflection{% endblock %} {% block content%}
+
+<div id="reflection-content">
+
+    <h2>REFLECTION</h2>
+
+    <section id="reflection">
+        <h3>Installation of Flask and Building the Webpage 👀</h3>
+        <p>
+            <p> To install flask, I first installed python and pip on my computer and did the following command in my terminal:<p> 
+            <code> pip install flask <br><br></code>  
+            
+            In order to build the webpage, I had to create a python file in which it renders the html files and the css 
+            styling. 
+            In this python file, I had to define the home route (default URL of the page) and included a dictionary of 2 projects
+            where they keys were the project attributes such as image, title, description. I also defined the reflection route
+            where I had to indicate that the web page links to this reflection.html file. The rest of this webpage mainly consists
+            of HTML and CSS programming. In these HTML files, Flask leverages Jinja 2 as its template engine to help render the HTML
+            files dynamically. By using extend at the top of the HTML file, Flask understands that the current HTML template will inherit
+            its content from another template. Another feature I had to use was block title, where it overrides the website title from the inherited
+            template and changes that value. 
+        </p>
+
+        <h3>Journey of Struggles 😓</h3>
+        <p>
+            I mainly had difficulties with understanding the app routing, and ensuring that it goes to the correct webpage. Additionally
+            it was hard to display the specific images that I had defined in the python file within the html file itself. After a lot of 
+            web browsing, I realized that I had to use {% raw %}{{}}{% endraw %} around the components in the HTML file. For instance, in the index.html file, I 
+            had project["image"], but the webpage wasn't rendering it properly. Therefore, I had to include {% raw %}{{}}{% endraw %} around that component for it 
+            to render correctly. 
+
+        </p>
+    </section>
+</div>
+{% endblock %}
